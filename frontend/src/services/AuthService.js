@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const AUTH_API_BASE_URL = 'http://localhost:8080/api/auth';
+//const AUTH_API_BASE_URL = 'http://localhost:8080/api/auth';
+const AUTH_API_BASE_URL = 'https://taskflow-cvih.onrender.com/api/auth';
 
 export const registerUser = (user) => {
     return axios.post(`${AUTH_API_BASE_URL}/register`, user);
