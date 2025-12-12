@@ -17,7 +17,8 @@ const RegisterComponent = () => {
         const register = { name, username, email, password };
         registerUser(register).then((response) => {
             console.log("User registered successfully");
-            const navigate = useNavigate();
+            alert("Registration successful! Please login.");
+            navigate("/login");
         }).catch((error) => {
             console.log("Something went wrong", error);
         });
