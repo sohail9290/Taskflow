@@ -55,6 +55,7 @@ public class AuthServiceImpl implements AuthService {
         Set<Role> roles = new HashSet<>();
         Role userRole=roleRepository.findByName("ROLE_USER");
         roles.add(userRole);
+        user.setRoles(roles);
         userRepository.save(user);
         return "User registered successfully";
     }
