@@ -29,11 +29,11 @@ public UserDetails loadUserByUsername(String usernameOrEmail) throws UsernameNot
             .map(role -> new SimpleGrantedAuthority(role.getName()))
             .collect(Collectors.toSet());
 
-    return new org.springframework.security.core.userdetails.User(
-            user.getUsername(),   // ✔ ALWAYS use actual username stored in DB
-            user.getPassword(),   // ✔ BCrypt password
-            grantedAuthorities
-    );
+   return new org.springframework.security.core.userdetails.User(
+        user.getUsername(),      // ✅ FIX
+        user.getPassword(),
+        grantedAuthorities
+);
 }
 
 }
