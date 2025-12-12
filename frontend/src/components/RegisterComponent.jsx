@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { registerUser } from '../services/AuthService';
+import { useNavigate } from 'react-router-dom';
+
 
 const RegisterComponent = () => {
 
@@ -7,13 +9,15 @@ const RegisterComponent = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
 
     const handleRegistrationForm = (e) => {
         e.preventDefault();
         const register = { name, username, email, password };
-        console.log(register);
         registerUser(register).then((response) => {
-            console.log("User registered successfully", response.data);
+            console.log("User registered successfully");
+            const navigate = useNavigate();
         }).catch((error) => {
             console.log("Something went wrong", error);
         });
