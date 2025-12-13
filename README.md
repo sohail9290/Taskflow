@@ -43,7 +43,6 @@ The project demonstrates real-world backend security, clean API design, and fron
 - Stateless backend architecture
 - Production-ready deployment
 
----
 
 ## 🛠️ Tech Stack
 
@@ -66,7 +65,7 @@ The project demonstrates real-world backend security, clean API design, and fron
 - Backend: Render
 - Frontend: Vercel
 
----
+
 
 ## 🔐 Authentication & Security
 
@@ -79,10 +78,6 @@ The project demonstrates real-world backend security, clean API design, and fron
 5. JWT is sent with every request via the `Authorization` header
 6. Backend validates the token using a Spring Security JWT filter
 
----
-
----
-
 ### JWT Token Implementation
 
 - Implemented using **JJWT**
@@ -93,8 +88,6 @@ The project demonstrates real-world backend security, clean API design, and fron
 - Token signed using **HMAC SHA key**
 - Secret & expiration stored as environment variables
 
----
-
 ### Spring Security Configuration
 
 - CSRF disabled (stateless REST APIs)
@@ -103,8 +96,6 @@ The project demonstrates real-world backend security, clean API design, and fron
 - JWT filter added before `UsernamePasswordAuthenticationFilter`
 - Custom authentication entry point for unauthorized access
 - Method-level security using `@PreAuthorize`
-
----
 
 ## 🧑‍💻 Role-Based Authorization
 
@@ -119,7 +110,6 @@ Authorization enforced using:
 @PreAuthorize("hasRole('ADMIN')")
 @PreAuthorize("hasAnyRole('ADMIN','USER')")
 ```
----
 
 ## 📌 REST API Endpoints
 
@@ -129,8 +119,6 @@ Authorization enforced using:
 |-------:|-----------------------|--------------------------------------|
 | POST   | `/api/auth/register`  | Register a new user                  |
 | POST   | `/api/auth/login`     | Authenticate user & receive JWT      |
-
----
 
 ### 📝 Todo Management
 
@@ -143,8 +131,6 @@ Authorization enforced using:
 | DELETE | `/api/todos/{id}`                | ADMIN          | Delete todo              |
 | PATCH  | `/api/todos/{id}/complete`       | ADMIN, USER    | Mark todo complete       |
 | PATCH  | `/api/todos/{id}/in-complete`    | ADMIN, USER    | Mark todo incomplete     |
-
----
 
 ## 📈 Why This Project Matters
 
