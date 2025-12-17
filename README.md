@@ -124,13 +124,13 @@ Authorization enforced using:
 ---
 ## 📌 REST API Endpoints
 
-###🔐 Authentication
+### 🔐 Authentication
 | Method | Endpoint             | Description                     |
 |--------|----------------------|---------------------------------|
 | POST   | /api/auth/register   | Register a new user             |
 | POST   | /api/auth/login      | Authenticate and receive JWT    |
 
-###📝 Todo Management
+### 📝 Todo Management
 | Method | Endpoint                       | Role           | Description             |
 |--------|--------------------------------|----------------|-------------------------|
 | POST   | /api/todos                     | ADMIN          | Create a new todo       |
